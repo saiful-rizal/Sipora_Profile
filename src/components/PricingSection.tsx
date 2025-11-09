@@ -18,7 +18,7 @@ const FeaturesSection = () => {
     <section className="bg-gray-900 py-20 md:py-28">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold text-white mb-4">
-          Fitur <span className="text-blue-400">Keunggulan</span> Sipora Perpus Takaan
+          Fitur <span className="text-blue-400">Keunggulan</span> Sipora Repository Assets
         </h2>
         <p className="text-gray-400 max-w-3xl mx-auto mb-12 text-lg">
           Solusi lengkap untuk pengelolaan peminjaman buku yang efisien dan modern bagi perpustakaan Anda.
