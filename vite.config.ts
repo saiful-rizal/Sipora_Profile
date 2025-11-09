@@ -2,11 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(({ mode }) => ({
-  base: "/Sipora_profile/",
+export default defineConfig({
+  // ✅ Base dikembalikan ke relatif agar cocok di localhost & vercel
+  base: "./",
   server: {
-    host: "::",
-    port: 8080,
+    host: "0.0.0.0",
+    port: 5173,
     open: true,
   },
   plugins: [react()],
@@ -18,15 +19,10 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        entryFileNames: 'index.js',
-        chunkFileNames: 'chunk-[name].js',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'index.css';
-          }
-          return 'asset-[name][extname]';
-        },
+        entryFileNames: "assets/[name].[hash].js",
+        chunkFileNames: "assets/[name].[hash].js",
+        assetFileNames: "assets/[name].[hash].[ext]",
       },
     },
   },
-}));
+});

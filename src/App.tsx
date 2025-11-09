@@ -12,7 +12,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/Sipora_profile">
+      <BrowserRouter basename="/">
         <Routes>
           <Route path="/" element={<Index />} />
         </Routes>

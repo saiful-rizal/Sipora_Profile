@@ -7,7 +7,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path) => location.pathname === path;
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -21,11 +21,9 @@ const Navbar = () => {
     <nav className="bg-saas-black/90 backdrop-blur-md sticky top-0 z-50 border-b border-saas-gray transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-
-          {/* Logo with Polije image */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="public/assets/logo.polije.png"  // sesuaikan path ini sesuai letak file logomu
+              src="/logo.polije.png"
               alt="Polije Logo"
               className="w-8 h-8 object-contain"
             />
@@ -34,7 +32,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -51,7 +48,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Link
               to="/contact"
@@ -61,7 +57,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Button */}
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 text-gray-200 rounded-md hover:bg-saas-gray/60 transition"
@@ -72,7 +67,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-saas-darkGray border-t border-saas-gray animate-fadeIn">
           <div className="px-4 py-4 space-y-3">
