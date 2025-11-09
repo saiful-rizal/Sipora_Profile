@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 33% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 217 33% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 217 33% 8%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 20% 10%;
+
+    --secondary: 217 33% 16%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 217 10% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 20% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 217 33% 22%;
+    --input: 217 33% 22%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Social Media Colors */
+    --twitter: 203 89% 53%;
+    --facebook: 221 44% 41%;
+    --linkedin: 210 90% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Typography */
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    @apply text-white font-bold;
+  }
+
+  .prose h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  .prose h2 {
+    @apply text-2xl md:text-3xl mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-xl md:text-2xl mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply text-gray-300 mb-4;
+  }
+
+  .prose a {
+    @apply text-blue-400 hover:text-blue-500 transition-colors;
+  }
+
+  .prose ul, .prose ol {
+    @apply text-gray-300 mb-4 pl-6;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic my-6 text-gray-300;
+  }
+
+  .prose code {
+    @apply bg-blue-950 px-1 py-0.5 rounded text-blue-200;
+  }
+
+  .prose pre {
+    @apply bg-blue-950 p-4 rounded-lg mb-6 overflow-x-auto;
+  }
+
+  .prose img {
+    @apply rounded-lg my-6;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-blue-950 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .card-shadow {
+    @apply shadow-[0_8px_30px_rgb(30,64,175,0.2)];
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .animate-fade-in {
+    @apply opacity-0 translate-y-4 animate-[fadeIn_0.5s_ease-out_forwards];
+  }
+
+  /* Line clamp */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Hover zoom effect */
+  .hover-zoom {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blue glow pulse */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgb(37, 99, 235);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.pulse-blue {
+  animation: pulseGlow 2s infinite;
+}
