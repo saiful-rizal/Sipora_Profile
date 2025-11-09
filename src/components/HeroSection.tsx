@@ -58,7 +58,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 blur-xl opacity-20 rounded-xl"></div>
               <div className="relative bg-[#0f172a] rounded-xl border border-blue-800/30 p-2 shadow-lg transform transition-all duration-500 hover:scale-[1.01] hover:shadow-blue-500/20 hover:shadow-xl">
                 <img 
-                  src="assets/polije.jpg"
+                  src="public/assets/polije.jpg"
                   alt="Library Preview"
                   className="rounded-lg w-full"
                 />

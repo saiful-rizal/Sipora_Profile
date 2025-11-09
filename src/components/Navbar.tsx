@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* Logo with Polije image */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="assets/logo.polije.png"  // sesuaikan path ini sesuai letak file logomu
+              src="public/assets/logo.polije.png"  // sesuaikan path ini sesuai letak file logomu
               alt="Polije Logo"
               className="w-8 h-8 object-contain"
             />
