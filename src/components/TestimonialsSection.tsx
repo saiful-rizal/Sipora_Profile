@@ -2,25 +2,40 @@ import React from "react";
 
 const testimonials = [
   {
-    text: "Sipora Perpus Takaan telah membantu kami mengelola koleksi buku dengan lebih efisien dan meningkatkan layanan kepada pengunjung.",
-    author: "Sarah Johnson",
-    position: "Kepala Perpustakaan, Universitas Takaan",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100",
+    text: "Sipora Perpus Takaan sangat membantu saya dalam mencari dan meminjam buku. Tidak perlu lagi antre di perpustakaan, semuanya bisa dilakukan secara online.",
+    author: "Saiful Rizal",
+    position: "Mahasiswa Politeknik Negeri Jember",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    text: "Fitur pencarian dan peminjaman di Sipora sangat user-friendly, membuat pengunjung mudah menemukan buku yang mereka butuhkan.",
-    author: "Michael Chen",
-    position: "Staff IT, Perpustakaan Kota",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100",
+    text: "Tampilannya sederhana dan mudah dipahami. Saya bisa menemukan buku yang saya butuhkan dengan cepat dan praktis.",
+    author: "Ratu",
+    position: "Mahasiswi Politeknik Negeri Jember",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {
-    text: "Dengan Sipora, kami dapat memantau koleksi buku dan aktivitas peminjaman secara real-time, sangat membantu pengelolaan perpustakaan.",
-    author: "Emily Rodriguez",
-    position: "Manajer Operasional, Perpustakaan Sekolah",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100",
+    text: "Sebagai mahasiswa yang sering meminjam buku, Sipora benar-benar mempermudah proses peminjaman dan pengembalian. Sangat efisien!",
+    author: "Robit",
+    position: "Mahasiswa Politeknik Negeri Jember",
+    image: "https://randomuser.me/api/portraits/men/68.jpg",
+  },
+  {
+    text: "Dengan adanya Sipora, saya tidak perlu datang langsung ke perpustakaan hanya untuk mengecek ketersediaan buku. Cukup lewat HP saja.",
+    author: "Talitha",
+    position: "Mahasiswi Politeknik Negeri Jember",
+    image: "https://randomuser.me/api/portraits/women/30.jpg",
+  },
+  {
+    text: "Desain Sipora keren dan responsif. Membuat saya semakin semangat membaca dan memanfaatkan koleksi buku digital kampus.",
+    author: "Hilda",
+    position: "Mahasiswi Politeknik Negeri Jember",
+    image: "https://randomuser.me/api/portraits/women/27.jpg",
+  },
+  {
+    text: "Sipora benar-benar membantu saya dalam mencari referensi tugas kuliah. Semua data buku bisa diakses dengan cepat dan mudah.",
+    author: "Anang",
+    position: "Mahasiswa Politeknik Negeri Jember",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
   },
 ];
 
@@ -42,15 +57,15 @@ const StarRating = () => (
 
 const TestimonialsSection = () => {
   return (
-    <div className="bg-gray-900 py-16 md:py-24">
+    <div className="bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Testimoni <span className="text-blue-400">Pengguna Sipora</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
+            Testimoni <span className="text-blue-500">Pengguna Sipora</span>
           </h2>
-          <p className="text-gray-400">
-            Berikut pendapat pengguna kami tentang layanan dan fitur Sipora
-            Perpus Takaan.
+          <p className="text-gray-600">
+            Berikut adalah pengalaman para mahasiswa yang telah menggunakan
+            Sipora Perpus Takaan untuk membantu kegiatan belajar mereka.
           </p>
         </div>
 
@@ -58,11 +73,10 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg"
+              className="bg-blue-50 border border-blue-100 rounded-xl p-6 shadow-md"
             >
               <StarRating />
-
-              <p className="text-gray-300 mb-6 italic">"{testimonial.text}"</p>
+              <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
 
               <div className="flex items-center">
                 <img
@@ -71,8 +85,8 @@ const TestimonialsSection = () => {
                   className="w-12 h-12 rounded-full mr-4 object-cover"
                 />
                 <div>
-                  <p className="font-semibold text-white">{testimonial.author}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.position}</p>
+                  <p className="font-semibold text-blue-800">{testimonial.author}</p>
+                  <p className="text-gray-600 text-sm">{testimonial.position}</p>
                 </div>
               </div>
             </div>
